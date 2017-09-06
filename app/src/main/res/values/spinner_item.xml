@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_item">
+        <item>游戏ID</item>
+        <item>支付宝账号</item>
+        <item>微信账号</item>
+        <item>QQ账号</item>
+        <item>身份证</item>
+    </string-array>
+</resources>

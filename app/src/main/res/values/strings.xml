@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">JX3_Credit</string>
+    <string name="button_search">查询</string>
+    <string name="button_jubao">我要举报</string>
+</resources>
