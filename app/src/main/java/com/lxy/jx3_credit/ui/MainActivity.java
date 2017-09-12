@@ -1,4 +1,4 @@
-package com.lxy.jx3_credit;
+package com.lxy.jx3_credit.ui;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +9,8 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+
+import com.lxy.jx3_credit.R;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
