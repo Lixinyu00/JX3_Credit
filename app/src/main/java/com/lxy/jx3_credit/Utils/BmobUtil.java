@@ -2,7 +2,11 @@ package com.lxy.jx3_credit.Utils;
 
 import com.lxy.jx3_credit.Bean.User;
 
+import java.util.List;
+
 import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 
 /**
  * @author LiXinyu
@@ -11,10 +15,17 @@ import cn.bmob.v3.BmobQuery;
 
 public class BmobUtil<T> {
 
-    private static User user;
+    private T user;
 
-    public User getuser(T t){
+    public T getuser(String content){
         BmobQuery<T>  bmobQuery=new BmobQuery<T>();
+        bmobQuery.addWhereEqualTo("id",content);
+        bmobQuery.findObjects(new FindListener<T>() {
+            @Override
+            public void done(List<T> list, BmobException e) {
+                user=list.get(0);
+            }
+        });
         return user;
     }
 }

@@ -15,6 +15,7 @@ import com.lxy.jx3_credit.Utils.BmobUtil;
 import com.lxy.jx3_credit.confing.Confing;
 import com.lxy.jx3_credit.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import cn.bmob.v3.Bmob;
@@ -64,6 +65,14 @@ public class SearchActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        Class o=User.class;
+        List<Class> list=new ArrayList<>();
+        list.add(User.class);
+
+
+        BmobUtil<UserId> bmobUtil=new BmobUtil<>();
+        UserId userId=bmobUtil.getuser(content);
+        user=userId.getUser();
         BmobQuery<UserId> userquery=new BmobQuery<UserId>();
         userquery.addWhereEqualTo("id",content);
         userquery.findObjects(new FindListener<UserId>() {
